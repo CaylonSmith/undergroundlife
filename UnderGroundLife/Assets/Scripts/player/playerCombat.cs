@@ -9,8 +9,9 @@ public class playerCombat : MonoBehaviour
     [SerializeField] Transform attackPoint;
     public float attackRange = 0.5f;
     public LayerMask enemyLayers;
-    public int attackDamage = 40;
-
+    public int attackDamage;
+    public float attackRate = 1f;
+    float nextTimeAttack = 0f;
 
 
     // Start is called before the first frame update
@@ -22,11 +23,22 @@ public class playerCombat : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.K))
+       
+
+
+
+        if (Time.time >= nextTimeAttack)
         {
-            attack();
-            print("pie");
+            if (Input.GetKeyDown(KeyCode.K))
+            {
+
+                attack();
+                nextTimeAttack = Time.time + 1 / attackRate;
+                print("pie");
+            }
+           
         }
+
     }
 
 
