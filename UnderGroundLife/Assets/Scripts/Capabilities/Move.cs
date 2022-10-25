@@ -13,10 +13,10 @@ namespace Shinjingi
         private Vector2 _direction, _desiredVelocity, _velocity;
         private Rigidbody2D _body;
         private Ground _ground;
-
+        private bool isFacingRight;
         private float _maxSpeedChange, _acceleration;
         private bool _onGround;
-
+        private float horizontal;
         private void Awake()
         {
             _body = GetComponent<Rigidbody2D>();
@@ -26,8 +26,10 @@ namespace Shinjingi
 
         private void Update()
         {
-            _direction.x = _controller.input.RetrieveMoveInput();
-            _desiredVelocity = new Vector2(_direction.x, 0f) * Mathf.Max(_maxSpeed - _ground.Friction, 0f);
+            horizontal = Input.GetAxisRaw("Horizontal");
+          
+            _desiredVelocity = new Vector2(horizontal, 0f) * Mathf.Max(_maxSpeed - _ground.Friction, 0f);
+            Flip();
         }
 
         private void FixedUpdate()
@@ -41,5 +43,20 @@ namespace Shinjingi
 
             _body.velocity = _velocity;
         }
+
+
+
+        private void Flip()
+        {
+            if (isFacingRight && horizontal > 0f || !isFacingRight && horizontal < 0f)
+            {
+                isFacingRight = !isFacingRight;
+                transform.Rotate(0f, 180f, 0f);
+
+            }
+        }
     }
+
+
+
 }
