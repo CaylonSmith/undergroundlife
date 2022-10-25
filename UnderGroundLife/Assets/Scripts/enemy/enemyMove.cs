@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -20,6 +21,9 @@ public class enemyMove : MonoBehaviour
     Rigidbody2D rb2d;
    [SerializeField] float moveSpeed = 5;
 
+    [SerializeField] Transform player;
+    [SerializeField] float aggroRange;
+
 
 
 
@@ -35,7 +39,94 @@ public class enemyMove : MonoBehaviour
         rb2d = GetComponent<Rigidbody2D>();
     }
 
-    // Update is called once per frame
+    private void Update()
+    {
+        float distToPlayer = Vector2.Distance(transform.position, player.position);
+
+
+        if (distToPlayer< aggroRange)
+        {
+            chasePlayer();
+        }
+        else
+        {
+            stopChasingPlayer();
+        }
+
+    }
+
+    private void stopChasingPlayer()
+    {
+        if (isHittingWall())
+        {
+            if (facingDirection == LEFT)
+            {
+                changeFacingDirection(RIGHT);
+
+
+            }
+            else if (facingDirection == RIGHT)
+            {
+                changeFacingDirection(LEFT);
+
+
+            }
+        }
+
+
+        void changeFacingDirection(string newDirection)
+        {
+
+            Vector3 newScale = baseScale;
+
+            if (newDirection == LEFT)
+            {
+
+                transform.Rotate(0f, 180f, 0f);
+            }
+
+            else if (newDirection == RIGHT)
+            {
+                transform.Rotate(0f, 180f, 0f);
+            }
+
+            facingDirection = newDirection;
+        }
+
+
+    }
+
+    private void chasePlayer()
+    {
+        float vX = moveSpeed;
+
+        if (facingDirection == LEFT)
+        {
+            vX = -moveSpeed;
+        }
+
+
+
+        if (transform.position.x < player.position.x)
+        {
+            facingDirection = RIGHT;
+            rb2d.velocity = new Vector2(vX, rb2d.velocity.y);
+            transform.Rotate(0f, 180f, 0f);
+
+        }
+        else if (transform.position.x > player.position.x)
+        {
+            facingDirection = LEFT;
+            rb2d.velocity = new Vector2(-vX, rb2d.velocity.y);
+            transform.Rotate(0f, 180f, 0f);
+        }
+    }
+
+
+
+
+
+
     private void FixedUpdate()
 
     {
@@ -48,8 +139,8 @@ public class enemyMove : MonoBehaviour
         {
             vX = -moveSpeed;
         }
-      
         rb2d.velocity = new Vector2(vX, rb2d.velocity.y);
+
 
         if (isHittingWall())
         {
