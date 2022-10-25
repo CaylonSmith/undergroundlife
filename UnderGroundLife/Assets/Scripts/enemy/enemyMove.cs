@@ -192,7 +192,8 @@ public class enemyMove : MonoBehaviour
             castDist = -baseCastDist;
            
         }
-        else
+        else if (facingDirection == RIGHT)
+
         {
             castDist = baseCastDist;
            
