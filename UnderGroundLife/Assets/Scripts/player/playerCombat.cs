@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -14,24 +15,26 @@ public class playerCombat : MonoBehaviour
     float nextTimeAttack = 0f;
 
 
+  public  bool hasKnife;
+
     // Start is called before the first frame update
     void Start()
     {
-        attackDamage = 100;
+       
     }
 
     // Update is called once per frame
     void Update()
     {
-       
 
+        getDamage();
 
 
         if (Time.time >= nextTimeAttack)
         {
             if (Input.GetKeyDown(KeyCode.K))
             {
-
+                useWeapon();
                 attack();
                 nextTimeAttack = Time.time + 1 / attackRate;
                 
@@ -41,8 +44,30 @@ public class playerCombat : MonoBehaviour
 
     }
 
+    private void getDamage()
+    {
+        if (hasKnife == true)
+        {
+            attackDamage = 100;
+        }
+        else if(hasKnife==false)
+        {
+            attackDamage = 50;
+        }
+    }
 
 
+    private void useWeapon()
+    {
+        if (hasKnife == true)
+        {
+            //play knife attack animation
+        }
+        else if (hasKnife == false)
+        {
+            //play fist animation
+        }
+    }
 
     void attack()
     {

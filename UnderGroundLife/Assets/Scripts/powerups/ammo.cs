@@ -13,12 +13,12 @@ public class ammo : MonoBehaviour
 
 
 
+            print("creampie");
 
+            collision.GetComponent<weapon>().allowedShoot = true;
+collision.GetComponent<weapon>().shotsLeft = collision.GetComponent<weapon>().maxShots;
 
-            GameObject.FindGameObjectWithTag("weapon").GetComponent<weapon>().allowedShoot = true;
-                GameObject.FindGameObjectWithTag("weapon").GetComponent<weapon>().shotsLeft = GameObject.FindGameObjectWithTag("weapon").GetComponent<weapon>().maxShots;
-                Destroy(gameObject);
-          
+            Destroy(gameObject);
 
         }
 
