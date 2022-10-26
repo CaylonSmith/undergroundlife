@@ -33,7 +33,8 @@ public class enemyHealth : MonoBehaviour
         Debug.Log("enemy has died");
 
         gameObject.GetComponent<Renderer>().material.color = new Color(0, 0, 0);
-       Destroy( gameObject.GetComponent<Rigidbody2D>());
+       Destroy( gameObject.GetComponent<enemyCombat>());
+       Destroy( gameObject.GetComponent<enemyMove>());
 
     }
 }

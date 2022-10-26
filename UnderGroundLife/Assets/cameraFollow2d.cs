@@ -15,6 +15,12 @@ public class cameraFollow2d : MonoBehaviour
     private Vector3 velocity;
 
 
+    [SerializeField] float leftLimit;
+    [SerializeField] float rightLimit;
+    [SerializeField] float toplimit;
+    [SerializeField] float bottomLimit;
+
+
 
 
     // Start is called before the first frame update
@@ -35,8 +41,34 @@ public class cameraFollow2d : MonoBehaviour
         endPos.z = -10;
 
 
-       // transform.position = Vector3.Lerp(startPos, endPos, timeOffset * Time.deltaTime);
+       transform.position = Vector3.Lerp(startPos, endPos, timeOffset * Time.deltaTime);
 
-        transform.position = Vector3.SmoothDamp(startPos, endPos, ref velocity, timeOffset);
+        //transform.position = Vector3.SmoothDamp(startPos, endPos, ref velocity, timeOffset);
+
+
+        transform.position = new Vector3
+            (
+
+
+            Mathf.Clamp(transform.position.x,leftLimit,rightLimit),
+
+            Mathf.Clamp(transform.position.y,bottomLimit,toplimit),
+            transform.position.z
+
+            );
+    }
+
+
+
+
+    private void OnDrawGizmos()
+    {
+        Gizmos.color = Color.red;
+
+        Gizmos.DrawLine(new Vector2(leftLimit, toplimit), new Vector2(rightLimit, toplimit));
+        Gizmos.DrawLine(new Vector2(rightLimit, toplimit), new Vector2(rightLimit, bottomLimit));
+        Gizmos.DrawLine(new Vector2(rightLimit, bottomLimit), new Vector2(leftLimit, bottomLimit));
+        Gizmos.DrawLine(new Vector2(leftLimit, bottomLimit), new Vector2(leftLimit, toplimit));
+
     }
 }

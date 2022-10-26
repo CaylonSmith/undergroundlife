@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class playerHealth : MonoBehaviour
 {
-    public int maxHealth = 100;
-    [SerializeField] int currenthealth;
+    public int maxHealth = 200;
+    public int currenthealth;
 
 
     [SerializeField] Rigidbody2D rb2d;
@@ -26,6 +26,16 @@ public class playerHealth : MonoBehaviour
             die();
         }
     }
+
+    public void gainHealth(int health)
+    {
+        currenthealth += health;
+
+      
+    }
+
+
+
 
     private void die()
     {

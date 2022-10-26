@@ -17,7 +17,7 @@ public class playerCombat : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        attackDamage = 40;
+        attackDamage = 100;
     }
 
     // Update is called once per frame
@@ -34,7 +34,7 @@ public class playerCombat : MonoBehaviour
 
                 attack();
                 nextTimeAttack = Time.time + 1 / attackRate;
-                print("pie");
+                
             }
            
         }
