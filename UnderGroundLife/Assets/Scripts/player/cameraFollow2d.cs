@@ -46,16 +46,16 @@ public class cameraFollow2d : MonoBehaviour
         //transform.position = Vector3.SmoothDamp(startPos, endPos, ref velocity, timeOffset);
 
 
-     //   transform.position = new Vector3
-         //   (
+       transform.position = new Vector3
+            (
 
 
-       //     Mathf.Clamp(transform.position.x,leftLimit,rightLimit),
+          Mathf.Clamp(transform.position.x,leftLimit,rightLimit),
 
-       //     Mathf.Clamp(transform.position.y,bottomLimit,toplimit),
-       //     transform.position.z
+          Mathf.Clamp(transform.position.y,bottomLimit,toplimit),
+          transform.position.z
 
-      //      );
+         );
     }
 
 
