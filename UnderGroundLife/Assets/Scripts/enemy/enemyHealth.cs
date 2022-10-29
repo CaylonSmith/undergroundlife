@@ -35,6 +35,7 @@ public class enemyHealth : MonoBehaviour
         gameObject.GetComponent<Renderer>().material.color = new Color(0, 0, 0);
        Destroy( gameObject.GetComponent<enemyCombat>());
        Destroy( gameObject.GetComponent<enemyMove>());
+        Destroy(gameObject.GetComponent<Collider2D>());
 
     }
 }

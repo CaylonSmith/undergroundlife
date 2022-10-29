@@ -50,7 +50,7 @@ public class projectile : MonoBehaviour
     void DestroyProjectile()
     {
         
-     //   Destroy(gameObject);
+     Destroy(gameObject);
     }
 
    

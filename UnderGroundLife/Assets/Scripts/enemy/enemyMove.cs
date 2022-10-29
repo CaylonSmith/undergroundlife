@@ -24,7 +24,7 @@ public class enemyMove : MonoBehaviour
     [SerializeField] Transform player;
     [SerializeField] float aggroRange;
 
-
+  public  bool movingRight;
 
 
 
@@ -53,83 +53,100 @@ public class enemyMove : MonoBehaviour
             stopChasingPlayer();
         }
 
+
+        if (movingRight == true)
+        {
+            transform.eulerAngles = new Vector3(0, 0, 0);
+
+
+
+        }
+
+        else if (movingRight == false)
+        {
+           
+            transform.eulerAngles = new Vector3(0, -180, 0);
+        }
+        
+
+
+
+
     }
 
     private void stopChasingPlayer()
     {
-        if (isHittingWall())
-        {
-            if (facingDirection == LEFT)
-            {
-                changeFacingDirection(RIGHT);
-
-
-            }
-            else if (facingDirection == RIGHT)
-            {
-                changeFacingDirection(LEFT);
-
-
-            }
+     
+       
         }
 
 
-        void changeFacingDirection(string newDirection)
-        {
+       
 
-            Vector3 newScale = baseScale;
-
-            if (newDirection == LEFT)
-            {
-
-                transform.Rotate(0f, 180f, 0f);
-            }
-
-            else if (newDirection == RIGHT)
-            {
-                transform.Rotate(0f, 180f, 0f);
-            }
-
-            facingDirection = newDirection;
-        }
-
-
-    }
+ 
 
     private void chasePlayer()
     {
+
+
+        print("pie");
         float vX = moveSpeed;
 
-        if (facingDirection == LEFT)
-        {
-            vX = -moveSpeed;
-        }
+
+
 
 
 
         if (transform.position.x < player.position.x)
         {
-            facingDirection = RIGHT;
+            movingRight = true;
             rb2d.velocity = new Vector2(vX, rb2d.velocity.y);
-            transform.Rotate(0f, 180f, 0f);
+
+            print("eeee");
+
 
         }
         else if (transform.position.x > player.position.x)
         {
-            facingDirection = LEFT;
+
+            movingRight = false;
             rb2d.velocity = new Vector2(-vX, rb2d.velocity.y);
-            transform.Rotate(0f, 180f, 0f);
+           
         }
     }
 
 
+    void changeFacingDirection(string newDirection)
+    {
 
+        Vector3 newScale = baseScale;
+
+        if (newDirection == LEFT)
+        {
+
+
+            transform.Rotate(0f, 180f, 0f);
+        }
+
+        else if (newDirection == RIGHT)
+        {
+            transform.Rotate(0f, 0f, 0f);
+        }
+
+        facingDirection = newDirection;
+
+
+        print(newDirection);
+    }
 
 
 
     private void FixedUpdate()
 
     {
+
+       
+
 
         Debug.Log(facingDirection);
 
@@ -139,7 +156,8 @@ public class enemyMove : MonoBehaviour
         {
             vX = -moveSpeed;
         }
-        rb2d.velocity = new Vector2(vX, rb2d.velocity.y);
+
+        
 
 
         if (isHittingWall())
@@ -147,7 +165,8 @@ public class enemyMove : MonoBehaviour
             if (facingDirection == LEFT)
             {
                 changeFacingDirection(RIGHT);
-                
+            
+
 
             }
             else if (facingDirection == RIGHT)
@@ -159,31 +178,20 @@ public class enemyMove : MonoBehaviour
         }
 
 
-        void changeFacingDirection(string newDirection)
-        {
-
-            Vector3 newScale = baseScale;
-
-            if (newDirection == LEFT)
-            {
-
-                transform.Rotate(0f, 180f, 0f);
-            }
-
-            else if (newDirection == RIGHT)
-            {
-                transform.Rotate(0f, 180f, 0f);
-            }
-
-            facingDirection = newDirection;
-        }
 
 
+      
+
+     
 
 
     }
+   
 
-        bool isHittingWall()
+
+
+
+    bool isHittingWall()
         {
             bool val = false;
         float castDist = baseCastDist;
@@ -225,37 +233,7 @@ public class enemyMove : MonoBehaviour
         return val;
         }
 
-    bool isNearEdge()
-    {
-        bool val = true;
-        float castDist = baseCastDist;
-        
-
-
-
-        Vector3 targetPos = castPos.position;
-        targetPos.y-=castDist;
-
-
-        Debug.DrawLine(castPos.position, targetPos, Color.red);
-
-
-        if (Physics2D.Linecast(castPos.position, targetPos, 1 << LayerMask.NameToLayer("terrain")))
-        {
-            val = false;
-        }
-
-        else
-        {
-            val = true;
-        }
-
-
-
-
-        return val;
-    }
-
+   
 
 
 

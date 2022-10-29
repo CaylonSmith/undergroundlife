@@ -13,6 +13,7 @@ public class playerCombat : MonoBehaviour
     public int attackDamage;
     public float attackRate = 1f;
     float nextTimeAttack = 0f;
+    public Animator animator;
 
 
   public  bool hasKnife;
@@ -35,9 +36,14 @@ public class playerCombat : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.K))
             {
                 useWeapon();
+                animator.SetBool("isAttacking", true);
                 attack();
                 nextTimeAttack = Time.time + 1 / attackRate;
                 
+            }
+            else
+            {
+                animator.SetBool("isAttacking", false);
             }
            
         }
@@ -75,8 +81,10 @@ public class playerCombat : MonoBehaviour
 
         foreach (Collider2D enemy in hitEnemies)
         {
-     
+
+           
             enemy.GetComponent<enemyHealth>().takeDamage(attackDamage);
+ 
         }
     }
 

@@ -99,7 +99,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 5
-  lifeTime: 10
+  lifeTime: 0.5
   destroyEffect: {fileID: 0}
   attackDamage: 100
 --- !u!58 &1219123911623735651

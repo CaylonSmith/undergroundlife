@@ -17,6 +17,8 @@ namespace Shinjingi
         private float _maxSpeedChange, _acceleration;
         private bool _onGround;
         private float horizontal;
+
+        public Animator animator;
         private void Awake()
         {
             _body = GetComponent<Rigidbody2D>();
@@ -27,6 +29,8 @@ namespace Shinjingi
         private void Update()
         {
             horizontal = Input.GetAxisRaw("Horizontal");
+
+            animator.SetFloat("speed", Mathf.Abs(horizontal));
           
             _desiredVelocity = new Vector2(horizontal, 0f) * Mathf.Max(_maxSpeed - _ground.Friction, 0f);
             Flip();

@@ -13,7 +13,7 @@ public class ammo : MonoBehaviour
 
 
 
-            print("creampie");
+          
 
             collision.GetComponent<weapon>().allowedShoot = true;
 collision.GetComponent<weapon>().shotsLeft = collision.GetComponent<weapon>().maxShots;
