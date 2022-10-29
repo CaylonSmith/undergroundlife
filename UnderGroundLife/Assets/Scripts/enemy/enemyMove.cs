@@ -25,8 +25,9 @@ public class enemyMove : MonoBehaviour
     [SerializeField] float aggroRange;
 
   public  bool movingRight;
+    public Animator animator;
 
-
+  public  GameObject _player;
 
 
     // Start is called before the first frame update
@@ -43,14 +44,14 @@ public class enemyMove : MonoBehaviour
     {
         float distToPlayer = Vector2.Distance(transform.position, player.position);
 
-
-        if (distToPlayer< aggroRange)
-        {
+       
+        if (distToPlayer< aggroRange&&GameObject.FindGameObjectWithTag("Player")!=null)        {
             chasePlayer();
         }
         else
         {
             stopChasingPlayer();
+           
         }
 
 
@@ -69,16 +70,16 @@ public class enemyMove : MonoBehaviour
         }
         
 
-
-
+     
 
     }
 
     private void stopChasingPlayer()
     {
-     
-       
-        }
+        animator.SetFloat("speed", Mathf.Abs(0));
+        animator.SetBool("isAttacking", false);
+
+    }
 
 
        
@@ -93,7 +94,7 @@ public class enemyMove : MonoBehaviour
         float vX = moveSpeed;
 
 
-
+       
 
 
 
@@ -101,7 +102,7 @@ public class enemyMove : MonoBehaviour
         {
             movingRight = true;
             rb2d.velocity = new Vector2(vX, rb2d.velocity.y);
-
+            animator.SetFloat("speed", Mathf.Abs(vX));
             print("eeee");
 
 
@@ -111,7 +112,8 @@ public class enemyMove : MonoBehaviour
 
             movingRight = false;
             rb2d.velocity = new Vector2(-vX, rb2d.velocity.y);
-           
+            animator.SetFloat("speed", Mathf.Abs(vX));
+
         }
     }
 
@@ -236,7 +238,7 @@ public class enemyMove : MonoBehaviour
    
 
 
-
+   
 
 
 

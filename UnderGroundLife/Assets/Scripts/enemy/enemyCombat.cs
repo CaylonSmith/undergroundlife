@@ -11,7 +11,8 @@ public class enemyCombat : MonoBehaviour
     public int attackDamage ;
     public float attackRate = 1f;
     float nextTimeAttack = 0f;
-
+    public Animator animator;
+    bool fighting;
 
 
     // Start is called before the first frame update
@@ -25,11 +26,20 @@ public class enemyCombat : MonoBehaviour
     {
         if (Time.time >= nextTimeAttack)
         {
-
+           
             attack();
             nextTimeAttack = Time.time + 1 / attackRate;
+      
+
+
         }
-        
+
+    
+
+
+
+
+
     }
 
 
@@ -41,9 +51,11 @@ public class enemyCombat : MonoBehaviour
 
         foreach (Collider2D player in hitEnemies)
         {
-
+            fighting = true;
+            animator.SetBool("isAttacking", true);
             player.GetComponent<playerHealth>().takeDamage(attackDamage);
         }
+      
     }
 
 

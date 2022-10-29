@@ -36,6 +36,7 @@ public class enemyHealth : MonoBehaviour
        Destroy( gameObject.GetComponent<enemyCombat>());
        Destroy( gameObject.GetComponent<enemyMove>());
         Destroy(gameObject.GetComponent<Collider2D>());
+        Destroy(gameObject.GetComponent<Animator>());
 
     }
 }
