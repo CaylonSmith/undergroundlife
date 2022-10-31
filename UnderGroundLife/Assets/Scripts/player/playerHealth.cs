@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class playerHealth : MonoBehaviour
 {
@@ -13,7 +14,13 @@ public class playerHealth : MonoBehaviour
     private void Start()
     {
         currenthealth = maxHealth;
-        rb2d = rb2d = GetComponent<Rigidbody2D>();
+     
+    }
+
+
+    private void Update()
+    {
+        rb2d = GameObject.FindGameObjectWithTag("Player").GetComponent<Rigidbody2D>();
     }
 
 
@@ -43,6 +50,6 @@ public class playerHealth : MonoBehaviour
 
         gameObject.GetComponent<Renderer>().material.color = new Color(255, 255, 255);
         Destroy(gameObject);
-
+        SceneManager.LoadScene(2);
     }
 }
