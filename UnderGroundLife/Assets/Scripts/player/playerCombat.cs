@@ -36,7 +36,7 @@ public class playerCombat : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.K))
             {
                 useWeapon();
-                animator.SetBool("isAttacking", true);
+               
                 attack();
                 nextTimeAttack = Time.time + 1 / attackRate;
                 
@@ -77,7 +77,9 @@ public class playerCombat : MonoBehaviour
 
     void attack()
     {
-     Collider2D[] hitEnemies=   Physics2D.OverlapCircleAll(attackPoint.position, attackRange, enemyLayers);
+
+        animator.SetBool("isAttacking", true);
+        Collider2D[] hitEnemies=   Physics2D.OverlapCircleAll(attackPoint.position, attackRange, enemyLayers);
 
         foreach (Collider2D enemy in hitEnemies)
         {
