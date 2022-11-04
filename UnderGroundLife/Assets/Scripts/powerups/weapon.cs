@@ -18,7 +18,6 @@ public class weapon : MonoBehaviour
 
 
 
-
     private void Start()
     {
         shotsLeft = maxShots;
@@ -29,6 +28,7 @@ public class weapon : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
         if (shotsLeft <= 0)
         {
             allowedShoot = false;
@@ -43,13 +43,15 @@ public class weapon : MonoBehaviour
         {
             if (allowedShoot == true)
             {
-                if (Input.GetKeyDown(KeyCode.L))
+                if (Input.GetButtonDown("Fire1"))
                 {
-                    Instantiate(_projectile, shotPoint.position, transform.rotation);
+                    Instantiate(_projectile, shotPoint.position, shotPoint.rotation);
 
                     shotsLeft -= 1;
 
                     timebtwShots = startTimebtwShots;
+                  
+
                 }
             }
         }

@@ -43,7 +43,13 @@ public class projectile : MonoBehaviour
         {
             enemy.GetComponent<enemyHealth>().takeDamage(MaxDamage);
         }
-        
+
+        if (enemy.CompareTag("Player"))
+        {
+            enemy.GetComponent<playerHealth>().takeDamage(MaxDamage);
+        }
+
+
     }
 
 

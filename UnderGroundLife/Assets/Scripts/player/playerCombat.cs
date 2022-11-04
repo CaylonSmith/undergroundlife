@@ -16,8 +16,16 @@ public class playerCombat : MonoBehaviour
     public Animator animator;
 
 
+
+
   public  bool hasKnife;
 
+
+    private void Awake()
+    {
+
+       
+    }
     // Start is called before the first frame update
     void Start()
     {
@@ -27,6 +35,8 @@ public class playerCombat : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+      
+       
 
         getDamage();
 
@@ -35,11 +45,16 @@ public class playerCombat : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.K))
             {
+
+
+
+
                 useWeapon();
-               
+
                 attack();
                 nextTimeAttack = Time.time + 1 / attackRate;
-                
+
+
             }
             else
             {
@@ -67,7 +82,7 @@ public class playerCombat : MonoBehaviour
     {
         if (hasKnife == true)
         {
-            //play knife attack animation
+            GameObject.FindGameObjectWithTag("weaponx").GetComponent<SpriteRenderer>().enabled = false;
         }
         else if (hasKnife == false)
         {
@@ -78,16 +93,24 @@ public class playerCombat : MonoBehaviour
     void attack()
     {
 
-        animator.SetBool("isAttacking", true);
-        Collider2D[] hitEnemies=   Physics2D.OverlapCircleAll(attackPoint.position, attackRange, enemyLayers);
+       
 
-        foreach (Collider2D enemy in hitEnemies)
-        {
 
-           
-            enemy.GetComponent<enemyHealth>().takeDamage(attackDamage);
- 
-        }
+          
+
+            animator.SetBool("isAttacking", true);
+            Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, enemyLayers);
+
+            foreach (Collider2D enemy in hitEnemies)
+            {
+
+
+                enemy.GetComponent<enemyHealth>().takeDamage(attackDamage);
+
+            }
+        
+
+
     }
 
 

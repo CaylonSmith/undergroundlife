@@ -44,7 +44,7 @@ namespace Shinjingi
             Flip();
 
 
-            print(moveInput);
+       
 
 
 
