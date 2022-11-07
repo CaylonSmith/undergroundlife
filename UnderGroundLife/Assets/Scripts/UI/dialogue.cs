@@ -40,14 +40,7 @@ public class dialogue : MonoBehaviour
         }
     }
     
-    private void OnTriggerExit2D(Collider2D collision)
-    {
-        if (collision.CompareTag("Player"))
-        {
-         
-           // dialogueBox.SetActive(false);
-        }
-    }
+  
 
 
 
