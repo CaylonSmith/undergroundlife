@@ -16,9 +16,12 @@ public class playerCombat : MonoBehaviour
     public Animator animator;
 
 
+    bool isGunning;
 
 
-  public  bool hasKnife;
+
+
+    public  bool hasKnife;
 
 
     private void Awake()
@@ -29,15 +32,15 @@ public class playerCombat : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-       
+        GameObject.FindGameObjectWithTag("weaponx").GetComponent<SpriteRenderer>().enabled = false;
     }
 
     // Update is called once per frame
     void Update()
     {
-      
-       
 
+
+        Gunning();
         getDamage();
 
 
@@ -82,7 +85,7 @@ public class playerCombat : MonoBehaviour
     {
         if (hasKnife == true)
         {
-            GameObject.FindGameObjectWithTag("weaponx").GetComponent<SpriteRenderer>().enabled = false;
+            isGunning = true;
         }
         else if (hasKnife == false)
         {
@@ -113,6 +116,19 @@ public class playerCombat : MonoBehaviour
 
     }
 
+
+
+    void Gunning()
+    {
+        if (isGunning == true)
+        {
+            GameObject.FindGameObjectWithTag("weaponx").GetComponent<SpriteRenderer>().enabled = false ;
+        }
+        else
+        {
+
+        }
+    }
 
     private void OnDrawGizmosSelected()
     {
