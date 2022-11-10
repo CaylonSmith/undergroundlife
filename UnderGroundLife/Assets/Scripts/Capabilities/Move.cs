@@ -60,9 +60,6 @@ namespace Shinjingi
                     else if (moveInput > 0)
                     {
                         direction = 2;
-
-
-                       
                     }
                 }
             }
@@ -73,16 +70,14 @@ namespace Shinjingi
                 if (direction == 1)
                 {
                     _body.velocity = Vector2.left * dashSpeed;
-                   
+
                     direction -= 1;
                 }
                 else if (direction == 2)
                 {
                     _body.velocity = Vector2.right * dashSpeed;
-                  
 
                     direction -= 2;
-
                 }
 
             }
