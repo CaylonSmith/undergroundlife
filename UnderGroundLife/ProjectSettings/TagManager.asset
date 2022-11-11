@@ -9,6 +9,7 @@ TagManager:
   - Ladder
   - Elevator
   - weaponx
+  - phase
   layers:
   - Default
   - TransparentFX
