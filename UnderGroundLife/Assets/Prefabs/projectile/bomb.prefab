@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: -5177049383360527965}
   m_Layer: 0
   m_Name: bomb
-  m_TagString: Untagged
+  m_TagString: bomb_p
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -107,8 +107,6 @@ MonoBehaviour:
   maxDamage: 1000
   timer: 3
   effect: {fileID: 0}
-  Maxbomb: 3
-  currentAmountBombs: 0
 --- !u!58 &3944699622962574950
 CircleCollider2D:
   m_ObjectHideFlags: 0

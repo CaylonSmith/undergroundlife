@@ -276,9 +276,11 @@ MonoBehaviour:
   timebtwShots: 0
   startTimebtwShots: 0
   speed: 0
-  maxShots: 6
+  maxShots: 0
   shotsLeft: 0
-  allowedShoot: 1
+  allowedShoot: 0
+  AmmoGunText: {fileID: 0}
+  MaxAmmoGunText: {fileID: 0}
 --- !u!95 &9165388818227224039
 Animator:
   serializedVersion: 4
@@ -325,6 +327,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bomb: {fileID: 4969812059232903558, guid: 7d60bdfc9f0d0b64b875ff4fd14e0d89, type: 3}
+  Maxbomb: 0
+  currentAmountBombs: 0
+  AmmoBombText: {fileID: 0}
+  MaxAmmoBombText: {fileID: 0}
 --- !u!1 &3966289221768391607
 GameObject:
   m_ObjectHideFlags: 0

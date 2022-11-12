@@ -11,10 +11,19 @@ public class enemyHealth : MonoBehaviour
 
     [SerializeField] Rigidbody2D rb2d;
 
+    private Material whiteMaterial;
+    private Material defaultMaterial;
+    SpriteRenderer sR;
+
     private void Start()
     {
         currenthealth = maxHealth;
         rb2d = rb2d = GetComponent<Rigidbody2D>();
+
+        sR = GetComponent<SpriteRenderer>();
+        defaultMaterial = sR.material;
+
+
     }
 
 
@@ -28,6 +37,14 @@ public class enemyHealth : MonoBehaviour
         }
     }
 
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("bullet_p"))
+        {
+
+        }
+    }
     private void die()
     {
         Debug.Log("enemy has died");

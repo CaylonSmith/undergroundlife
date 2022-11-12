@@ -18,7 +18,14 @@ public class ammo : MonoBehaviour
             collision.GetComponent<weapon>().allowedShoot = true;
 collision.GetComponent<weapon>().shotsLeft = collision.GetComponent<weapon>().maxShots;
 
+
+
+
             Destroy(gameObject);
+
+
+
+
 
         }
 

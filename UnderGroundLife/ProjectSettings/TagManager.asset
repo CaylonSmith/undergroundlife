@@ -11,6 +11,7 @@ TagManager:
   - weaponx
   - phase
   - terrain
+  - gg
   layers:
   - Default
   - TransparentFX

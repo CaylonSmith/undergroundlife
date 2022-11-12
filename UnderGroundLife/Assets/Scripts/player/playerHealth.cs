@@ -2,11 +2,17 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
+
+[ExecuteInEditMode()]
 public class playerHealth : MonoBehaviour
 {
-    public int maxHealth = 200;
+    public int maxHealth;
     public int currenthealth;
+
+    public Image bar;
+
 
 
     [SerializeField] Rigidbody2D rb2d;
@@ -21,6 +27,7 @@ public class playerHealth : MonoBehaviour
     private void Update()
     {
         rb2d = GameObject.FindGameObjectWithTag("Player").GetComponent<Rigidbody2D>();
+        getcurrentFill(); 
     }
 
 
@@ -36,7 +43,10 @@ public class playerHealth : MonoBehaviour
 
     public void gainHealth(int health)
     {
-        currenthealth += health;
+        if (currenthealth! > maxHealth)
+        {
+            currenthealth += health;
+        }
 
       
     }
@@ -51,5 +61,12 @@ public class playerHealth : MonoBehaviour
         gameObject.GetComponent<Renderer>().material.color = new Color(255, 255, 255);
         Destroy(gameObject);
         SceneManager.LoadScene(2);
+    }
+
+
+    public void getcurrentFill()
+    {
+        float fillAmount = (float)currenthealth / (float)maxHealth;
+        bar.fillAmount = fillAmount;
     }
 }

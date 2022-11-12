@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class bombMaker : MonoBehaviour
 {
@@ -9,12 +10,16 @@ public class bombMaker : MonoBehaviour
     public int Maxbomb;
     public int currentAmountBombs;
 
+    public TextMeshProUGUI AmmoBombText;
+
+    public TextMeshProUGUI MaxAmmoBombText;
+
 
 
 
     private void Awake()
     {
-       
+        currentAmountBombs = Maxbomb;
     }
     // Update is called once per frame
     void Update()
@@ -31,6 +36,11 @@ public class bombMaker : MonoBehaviour
         {
             print("bombs cannot be spawned");
         }
+
+
+        AmmoBombText.text = currentAmountBombs.ToString();
+
+        MaxAmmoBombText.text = Maxbomb.ToString();
         
     }
 

@@ -26,13 +26,13 @@ public class playerCombat : MonoBehaviour
 
     private void Awake()
     {
+        GameObject.FindGameObjectWithTag("weaponx").GetComponent<SpriteRenderer>().enabled = false;
 
-       
     }
     // Start is called before the first frame update
     void Start()
     {
-        GameObject.FindGameObjectWithTag("weaponx").GetComponent<SpriteRenderer>().enabled = false;
+       
     }
 
     // Update is called once per frame
@@ -122,7 +122,7 @@ public class playerCombat : MonoBehaviour
     {
         if (isGunning == true)
         {
-            GameObject.FindGameObjectWithTag("weaponx").GetComponent<SpriteRenderer>().enabled = false ;
+          
         }
         else
         {

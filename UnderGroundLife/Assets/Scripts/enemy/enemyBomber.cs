@@ -42,7 +42,7 @@ public class enemyBomber : MonoBehaviour
 
 
                 enemy.GetComponent<playerHealth>().takeDamage(damage);
-
+                Destroy(gameObject);
 
             }
 
