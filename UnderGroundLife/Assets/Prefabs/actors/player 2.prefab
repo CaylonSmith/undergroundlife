@@ -21,6 +21,7 @@ GameObject:
   - component: {fileID: 3966289221250218708}
   - component: {fileID: 9165388818227224039}
   - component: {fileID: 9165388818227224043}
+  - component: {fileID: 4759059310504105811}
   m_Layer: 10
   m_Name: player 2
   m_TagString: Player
@@ -176,6 +177,17 @@ MonoBehaviour:
   dashTime: 0
   startDashTime: 2
   direction: 0
+  dashTimeMax: 0
+  dashTimeMax2: 0
+  allowedToDash: 0
+  Coll: []
+  _playerCD2: {fileID: 0}
+  playerLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  enemyLayer:
+    serializedVersion: 2
+    m_Bits: 0
   animator: {fileID: 9165388818227224039}
 --- !u!114 &3966289221250218723
 MonoBehaviour:
@@ -300,6 +312,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 3966289221250218719}
+--- !u!114 &4759059310504105811
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3966289221250218720}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59d9f8b7a3eb7b1478c2c7eb5ebbdcbe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bomb: {fileID: 4969812059232903558, guid: 7d60bdfc9f0d0b64b875ff4fd14e0d89, type: 3}
 --- !u!1 &3966289221768391607
 GameObject:
   m_ObjectHideFlags: 0

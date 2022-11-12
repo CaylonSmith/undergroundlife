@@ -10,6 +10,7 @@ TagManager:
   - Elevator
   - weaponx
   - phase
+  - terrain
   layers:
   - Default
   - TransparentFX

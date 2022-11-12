@@ -33,11 +33,21 @@ public class dialogue : MonoBehaviour
         if (inDialogue == true)
         {
             GameObject.FindGameObjectWithTag("Player").GetComponent<Rigidbody2D>().velocity = new Vector2(0, 0);
+
+            if (Input.GetKeyDown(KeyCode.E))
+            {
+                inDialogue = false;
+                Destroy(dialogueBox);
+            }
         }
         else
         {
             inDialogue = false;
         }
+
+
+
+       
     }
     
   
