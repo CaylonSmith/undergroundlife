@@ -24,7 +24,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 200}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 28496
+  controlID: 45893
 --- !u!114 &2
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -48,7 +48,7 @@ MonoBehaviour:
     x: 321.8
     y: 19
     width: 585.2
-    height: 466.2
+    height: 474.2
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
@@ -96,9 +96,9 @@ MonoBehaviour:
       x: 0
       y: 21
       width: 585.2
-      height: 445.2
-    m_Scale: {x: 0.38098958, y: 0.38098958}
-    m_Translation: {x: 292.6, y: 222.6}
+      height: 453.2
+    m_Scale: {x: 0.38098958, y: 0.3809896}
+    m_Translation: {x: 292.6, y: 226.6}
     m_MarginLeft: 0
     m_MarginRight: 0
     m_MarginTop: 0
@@ -106,12 +106,12 @@ MonoBehaviour:
     m_LastShownAreaInsideMargins:
       serializedVersion: 2
       x: -768
-      y: -584.26794
+      y: -594.7669
       width: 1536
-      height: 1168.5359
+      height: 1189.5338
     m_MinimalGUI: 1
   m_defaultScale: 0.38098958
-  m_LastWindowPixelSize: {x: 731.5, y: 582.75}
+  m_LastWindowPixelSize: {x: 731.5, y: 592.75}
   m_ClearInEditMode: 1
   m_NoCameraWarning: 1
   m_LowResolutionForAspectRatios: 01000000000000000000
@@ -141,7 +141,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 200}
   m_MaxSize: {x: 16192, y: 16192}
   vertical: 1
-  controlID: 28497
+  controlID: 45894
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -166,7 +166,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 100}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
-  controlID: 28498
+  controlID: 45895
 --- !u!114 &5
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -186,8 +186,8 @@ MonoBehaviour:
     y: 0
     width: 320.8
     height: 495.2
-  m_MinSize: {x: 201, y: 221}
-  m_MaxSize: {x: 4001, y: 4021}
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 6}
   m_Panes:
   - {fileID: 6}
@@ -223,10 +223,10 @@ MonoBehaviour:
     m_SaveData: []
   m_SceneHierarchy:
     m_TreeViewState:
-      scrollPos: {x: 0, y: 218.79999}
+      scrollPos: {x: 0, y: 138.79999}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: dae2ffff2afbffff266000007c60000088600000
+      m_ExpandedIDs: dae2ffff18faffff2afbffff26600000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -310,8 +310,8 @@ MonoBehaviour:
       floating: 0
       collapsed: 0
       displayed: 1
-      snapOffset: {x: 0, y: 0}
-      snapOffsetDelta: {x: -100, y: -25.600006}
+      snapOffset: {x: -100, y: -25.600006}
+      snapOffsetDelta: {x: 0, y: 0}
       snapCorner: 3
       id: Tool Settings
       index: 0
@@ -332,7 +332,7 @@ MonoBehaviour:
       floating: 0
       collapsed: 0
       displayed: 1
-      snapOffset: {x: 0, y: 0}
+      snapOffset: {x: 0, y: 24.8}
       snapOffsetDelta: {x: 0, y: 0}
       snapCorner: 0
       id: unity-scene-view-toolbar
@@ -524,9 +524,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 79.59612, y: -64.99936, z: -0.019496838}
+    m_Target: {x: 381.23193, y: -13.990002, z: 0}
     speed: 2
-    m_Value: {x: 79.59612, y: -64.99936, z: -0.019496838}
+    m_Value: {x: 381.23193, y: -13.990002, z: 0}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -577,9 +577,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 2.6638274
+    m_Target: 1.2961063
     speed: 2
-    m_Value: 2.6638274
+    m_Value: 1.2961063
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -623,8 +623,8 @@ MonoBehaviour:
     y: 495.2
     width: 908
     height: 227.59998
-  m_MinSize: {x: 231, y: 271}
-  m_MaxSize: {x: 10001, y: 10021}
+  m_MinSize: {x: 230, y: 250}
+  m_MaxSize: {x: 10000, y: 10000}
   m_ActualView: {fileID: 10}
   m_Panes:
   - {fileID: 10}
@@ -672,22 +672,22 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Prefabs/collectables
+    - Assets/Graphics/Enemies/W2
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Prefabs/collectables
+  - Assets/Graphics/Enemies/W2
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\storm\OneDrive\Desktop\undergroundlife\UnderGroundLife
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 17.400024}
-    m_SelectedIDs: 76670000
-    m_LastClickedID: 26486
-    m_ExpandedIDs: 00000000046300000c63000000ca9a3b
+    scrollPos: {x: 0, y: 41.400024}
+    m_SelectedIDs: 226f0000
+    m_LastClickedID: 28450
+    m_ExpandedIDs: 00000000046300000a630000e071000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -740,10 +740,10 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: 04be0000
-    m_LastClickedInstanceID: 48644
-    m_HadKeyboardFocusLastEvent: 1
-    m_ExpandedInstanceIDs: c6230000f45f0000
+    m_SelectedInstanceIDs: 18faffff
+    m_LastClickedInstanceID: -1512
+    m_HadKeyboardFocusLastEvent: 0
+    m_ExpandedInstanceIDs: c6230000f45f0000966e0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -818,8 +818,8 @@ MonoBehaviour:
     y: 0
     width: 613.6
     height: 722.8
-  m_MinSize: {x: 275, y: 50}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 276, y: 71}
+  m_MaxSize: {x: 4001, y: 4021}
   m_ActualView: {fileID: 13}
   m_Panes:
   - {fileID: 13}
@@ -859,8 +859,8 @@ MonoBehaviour:
     m_CachedPref: 160
     m_ControlHash: -371814159
     m_PrefName: Preview_InspectorPreview
-  m_LastInspectedObjectInstanceID: 48644
-  m_LastVerticalScrollValue: 0
+  m_LastInspectedObjectInstanceID: -1512
+  m_LastVerticalScrollValue: 1440.0001
   m_GlobalObjectId: 
   m_InspectorMode: 0
   m_LockTracker:

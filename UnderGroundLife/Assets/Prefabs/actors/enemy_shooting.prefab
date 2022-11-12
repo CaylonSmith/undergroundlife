@@ -280,6 +280,8 @@ MonoBehaviour:
   maxHealth: 100
   currenthealth: 0
   rb2d: {fileID: 580212319263266482}
+  whiteMaterial: {fileID: 2100000, guid: a97dd2b9394523d499d54e93e07e392c, type: 2}
+  dead: {fileID: 21300000, guid: e670517c3f1f56f418e62f79557a970a, type: 3}
 --- !u!95 &6365059323473266682
 Animator:
   serializedVersion: 4
@@ -316,3 +318,5 @@ MonoBehaviour:
   startTimeBtwShots: 2
   projectile: {fileID: 0}
   shotPoint: {fileID: 0}
+  player: {fileID: 0}
+  aggroRange: 0

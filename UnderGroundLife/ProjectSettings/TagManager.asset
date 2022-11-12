@@ -12,6 +12,9 @@ TagManager:
   - phase
   - terrain
   - gg
+  - bullet_p
+  - bullet_e
+  - bomb_p
   layers:
   - Default
   - TransparentFX

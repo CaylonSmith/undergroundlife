@@ -11,9 +11,11 @@ public class enemyHealth : MonoBehaviour
 
     [SerializeField] Rigidbody2D rb2d;
 
-    private Material whiteMaterial;
+    public Material whiteMaterial;
     private Material defaultMaterial;
     SpriteRenderer sR;
+ public   Sprite dead;
+   
 
     private void Start()
     {
@@ -22,7 +24,8 @@ public class enemyHealth : MonoBehaviour
 
         sR = GetComponent<SpriteRenderer>();
         defaultMaterial = sR.material;
-
+     
+   
 
     }
 
@@ -30,6 +33,8 @@ public class enemyHealth : MonoBehaviour
     public void takeDamage(int damage)
     {
         currenthealth -= damage;
+        sR.material = whiteMaterial;
+        Invoke("resetMats", 0.3f);
 
         if (currenthealth <= 0)
         {
@@ -42,9 +47,21 @@ public class enemyHealth : MonoBehaviour
     {
         if (collision.CompareTag("bullet_p"))
         {
+          
+            print("got hit");
+        }
+      
+    }
 
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.CompareTag("bullet_p"))
+        {
+           
         }
     }
+
+
     private void die()
     {
         Debug.Log("enemy has died");
@@ -56,8 +73,14 @@ public class enemyHealth : MonoBehaviour
         Destroy(gameObject.GetComponent<Animator>());
         Destroy(gameObject.GetComponent<enemyShooting>());
         Destroy(gameObject.GetComponent<enemyBomber>());
-        
+
+        sR.sprite = dead;
+
+    }
 
 
+    void resetMats()
+    {
+        sR.material = defaultMaterial;
     }
 }
