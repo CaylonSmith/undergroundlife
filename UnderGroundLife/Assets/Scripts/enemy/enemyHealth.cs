@@ -15,6 +15,7 @@ public class enemyHealth : MonoBehaviour
     private Material defaultMaterial;
     SpriteRenderer sR;
  public   Sprite dead;
+
    
 
     private void Start()

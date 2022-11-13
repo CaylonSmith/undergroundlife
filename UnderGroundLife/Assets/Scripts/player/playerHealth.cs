@@ -17,6 +17,14 @@ public class playerHealth : MonoBehaviour
 
     [SerializeField] Rigidbody2D rb2d;
 
+    manager_checkPoint _cMan;
+
+
+
+    private void Awake()
+    {
+        _cMan = GameObject.FindGameObjectWithTag("cMan").GetComponent<manager_checkPoint>();
+    }
     private void Start()
     {
         currenthealth = maxHealth;
@@ -58,9 +66,15 @@ public class playerHealth : MonoBehaviour
     {
         Debug.Log("player has died");
 
-        gameObject.GetComponent<Renderer>().material.color = new Color(255, 255, 255);
-        Destroy(gameObject);
-        SceneManager.LoadScene(2);
+        gameObject.transform.position = _cMan.lastCheckpoint;
+
+
+        currenthealth = maxHealth;
+
+        //gameObject.GetComponent<Renderer>().material.color = new Color(255, 255, 255);
+
+       // Destroy(gameObject);
+      //  SceneManager.LoadScene(2);
     }
 
 
