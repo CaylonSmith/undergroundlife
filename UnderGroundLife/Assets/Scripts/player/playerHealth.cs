@@ -23,12 +23,13 @@ public class playerHealth : MonoBehaviour
 
     private void Awake()
     {
-        _cMan = GameObject.FindGameObjectWithTag("cMan").GetComponent<manager_checkPoint>();
+       
     }
     private void Start()
     {
         currenthealth = maxHealth;
-     
+        _cMan = GameObject.FindGameObjectWithTag("cMan").GetComponent<manager_checkPoint>();
+
     }
 
 
