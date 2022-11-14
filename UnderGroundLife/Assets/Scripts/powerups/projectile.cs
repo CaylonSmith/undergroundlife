@@ -8,7 +8,7 @@ public class projectile : MonoBehaviour
     public float lifeTime;
     public GameObject destroyEffect;
     public int attackDamage;
-     int MaxDamage;
+ public    int MaxDamage;
 
     private void Start()
     {

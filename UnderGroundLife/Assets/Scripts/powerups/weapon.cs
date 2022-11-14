@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using TMPro;
 public class weapon : MonoBehaviour
 {
 
@@ -16,6 +16,8 @@ public class weapon : MonoBehaviour
     public bool allowedShoot;
 
 
+    public TextMeshProUGUI AmmoGunText;
+    public TextMeshProUGUI MaxAmmoGunText;
 
 
     private void Start()
@@ -34,9 +36,10 @@ public class weapon : MonoBehaviour
             allowedShoot = false;
         }
 
-       
-      
-        
+
+
+        AmmoGunText.text = shotsLeft.ToString();
+        MaxAmmoGunText.text = maxShots.ToString();
 
 
         if (timebtwShots <= 0)

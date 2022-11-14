@@ -8,6 +8,8 @@ public class gunMonitor : MonoBehaviour
 {
 
     bool hasGun=false;
+
+   public float gunvisibleTimer;
     Vector3 lastMouseCoordinate = Vector3.zero;
     void Update()
     {
@@ -18,15 +20,40 @@ public class gunMonitor : MonoBehaviour
         {
             print("mosue is moving");
 
+
            GameObject.FindGameObjectWithTag("weaponx").GetComponent<SpriteRenderer>().enabled = true;
+            gunvisibleTimer = 5;
         }
 
         else {
-           
-        
+
+            gunvisibleTimer -= Time.deltaTime;
+
+
         }
-      
+
+        checkTImer();
+
+
+
+
+
+
 
         lastMouseCoordinate = Input.mousePosition;
     }
+
+
+
+    public void checkTImer()
+    {
+        if (gunvisibleTimer <= 0)
+        {
+            GameObject.FindGameObjectWithTag("weaponx").GetComponent<SpriteRenderer>().enabled = false;
+            
+        }
+    }
+
+
+
 }

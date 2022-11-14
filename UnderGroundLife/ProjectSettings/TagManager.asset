@@ -9,6 +9,12 @@ TagManager:
   - Ladder
   - Elevator
   - weaponx
+  - phase
+  - terrain
+  - gg
+  - bullet_p
+  - bullet_e
+  - bomb_p
   layers:
   - Default
   - TransparentFX
