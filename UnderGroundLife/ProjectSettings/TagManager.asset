@@ -3,7 +3,18 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - weapon
+  - enemy
+  - Ladder
+  - Elevator
+  - weaponx
+  - phase
+  - terrain
+  - gg
+  - bullet_p
+  - bullet_e
+  - bomb_p
   layers:
   - Default
   - TransparentFX
@@ -13,9 +24,9 @@ TagManager:
   - UI
   - 
   - 
-  - 
-  - 
-  - 
+  - terrain
+  - enemy
+  - player
   - 
   - 
   - 
