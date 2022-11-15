@@ -1,5 +1,13 @@
 fileFormatVersion: 2
-guid: d46e21c847fbc6b4abf7986341cdf49f
+<<<<<<< HEAD:UnderGroundLife/Assets/Sprites/Materials.meta
+guid: 95cfb561b1a97034491cdf5fc6ff2d56
+=======
+<<<<<<< HEAD
+guid: 7f35ef17b5c79914da3795d2d84f249e
+=======
+guid: 1f9c445ee079dd24889fda122e9a4d5a
+>>>>>>> 2be5eb19964f8ee37851f9fb4e201a99ecc36a1b
+>>>>>>> 16292138e0e430f0f209d4c4c5181581fb907071:UnderGroundLife/Assets/Scripts.meta
 folderAsset: yes
 DefaultImporter:
   externalObjects: {}

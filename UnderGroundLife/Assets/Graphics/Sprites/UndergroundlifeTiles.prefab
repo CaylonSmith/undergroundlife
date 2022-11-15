@@ -87,9 +87,16 @@ Tilemap:
   m_GameObject: {fileID: 6194030492370852412}
   m_Enabled: 1
   m_Tiles:
-<<<<<<< HEAD:UnderGroundLife/Assets/Sprites/UndergroundlifeTiles.prefab
-  - first: {x: -7, y: -7, z: 0}
-=======
+  - first: {x: -13, y: -4, z: 0}
+    second:
+      serializedVersion: 2
+      m_TileIndex: 25
+      m_TileSpriteIndex: 25
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 4
+      m_TileObjectToInstantiateIndex: 65535
+      dummyAlignment: 0
+      m_AllTileFlags: 1073741827
   - first: {x: -8, y: -4, z: 0}
     second:
       serializedVersion: 2
@@ -101,7 +108,6 @@ Tilemap:
       dummyAlignment: 0
       m_AllTileFlags: 1073741825
   - first: {x: -7, y: -4, z: 0}
->>>>>>> code:UnderGroundLife/Assets/Graphics/Sprites/UndergroundlifeTiles.prefab
     second:
       serializedVersion: 2
       m_TileIndex: 12
@@ -111,11 +117,7 @@ Tilemap:
       m_TileObjectToInstantiateIndex: 65535
       dummyAlignment: 0
       m_AllTileFlags: 1073741825
-<<<<<<< HEAD:UnderGroundLife/Assets/Sprites/UndergroundlifeTiles.prefab
-  - first: {x: -8, y: -6, z: 0}
-=======
   - first: {x: -6, y: -4, z: 0}
->>>>>>> code:UnderGroundLife/Assets/Graphics/Sprites/UndergroundlifeTiles.prefab
     second:
       serializedVersion: 2
       m_TileIndex: 11
@@ -145,6 +147,16 @@ Tilemap:
       m_TileObjectToInstantiateIndex: 65535
       dummyAlignment: 0
       m_AllTileFlags: 1073741825
+  - first: {x: -10, y: -3, z: 0}
+    second:
+      serializedVersion: 2
+      m_TileIndex: 24
+      m_TileSpriteIndex: 23
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 0
+      m_TileObjectToInstantiateIndex: 65535
+      dummyAlignment: 0
+      m_AllTileFlags: 1073741825
   - first: {x: -9, y: -3, z: 0}
     second:
       serializedVersion: 2
@@ -152,8 +164,6 @@ Tilemap:
       m_TileSpriteIndex: 10
       m_TileMatrixIndex: 0
       m_TileColorIndex: 1
-<<<<<<< HEAD:UnderGroundLife/Assets/Sprites/UndergroundlifeTiles.prefab
-=======
       m_TileObjectToInstantiateIndex: 65535
       dummyAlignment: 0
       m_AllTileFlags: 1073741827
@@ -174,10 +184,9 @@ Tilemap:
       m_TileSpriteIndex: 20
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
->>>>>>> code:UnderGroundLife/Assets/Graphics/Sprites/UndergroundlifeTiles.prefab
       m_TileObjectToInstantiateIndex: 65535
       dummyAlignment: 0
-      m_AllTileFlags: 1073741827
+      m_AllTileFlags: 1073741825
   - first: {x: -4, y: -3, z: 0}
     second:
       serializedVersion: 2
@@ -208,6 +217,26 @@ Tilemap:
       m_TileObjectToInstantiateIndex: 65535
       dummyAlignment: 0
       m_AllTileFlags: 1073741825
+  - first: {x: -11, y: -2, z: 0}
+    second:
+      serializedVersion: 2
+      m_TileIndex: 28
+      m_TileSpriteIndex: 28
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 0
+      m_TileObjectToInstantiateIndex: 65535
+      dummyAlignment: 0
+      m_AllTileFlags: 1073741825
+  - first: {x: -10, y: -2, z: 0}
+    second:
+      serializedVersion: 2
+      m_TileIndex: 23
+      m_TileSpriteIndex: 24
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 3
+      m_TileObjectToInstantiateIndex: 65535
+      dummyAlignment: 0
+      m_AllTileFlags: 1073741827
   - first: {x: -8, y: -2, z: 0}
     second:
       serializedVersion: 2
@@ -243,6 +272,26 @@ Tilemap:
       serializedVersion: 2
       m_TileIndex: 3
       m_TileSpriteIndex: 3
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 0
+      m_TileObjectToInstantiateIndex: 65535
+      dummyAlignment: 0
+      m_AllTileFlags: 1073741825
+  - first: {x: -14, y: -1, z: 0}
+    second:
+      serializedVersion: 2
+      m_TileIndex: 26
+      m_TileSpriteIndex: 26
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 5
+      m_TileObjectToInstantiateIndex: 65535
+      dummyAlignment: 0
+      m_AllTileFlags: 1073741827
+  - first: {x: -11, y: -1, z: 0}
+    second:
+      serializedVersion: 2
+      m_TileIndex: 27
+      m_TileSpriteIndex: 27
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -350,14 +399,6 @@ Tilemap:
     m_Data: {fileID: 11400000, guid: 87a902a2598f5d7408cc0aafca49368e, type: 2}
   - m_RefCount: 1
     m_Data: {fileID: 0}
-<<<<<<< HEAD:UnderGroundLife/Assets/Sprites/UndergroundlifeTiles.prefab
-  - m_RefCount: 1
-    m_Data: {fileID: 0}
-  - m_RefCount: 1
-    m_Data: {fileID: 11400000, guid: f42561d308e9d8d49956a8680a043bc1, type: 2}
-  - m_RefCount: 1
-    m_Data: {fileID: 11400000, guid: f78970cb62c974d4f8c8d73cdd0a588e, type: 2}
-=======
   - m_RefCount: 1
     m_Data: {fileID: 0}
   - m_RefCount: 1
@@ -384,7 +425,18 @@ Tilemap:
     m_Data: {fileID: 11400000, guid: c01802c2147bbf34fa9e7df557ff8e95, type: 2}
   - m_RefCount: 1
     m_Data: {fileID: 11400000, guid: 9d4553633b5c5804bbab507a60fa0196, type: 2}
->>>>>>> code:UnderGroundLife/Assets/Graphics/Sprites/UndergroundlifeTiles.prefab
+  - m_RefCount: 1
+    m_Data: {fileID: 0}
+  - m_RefCount: 1
+    m_Data: {fileID: 11400000, guid: 4a0a044b533387a4b803cc95a1c460ed, type: 2}
+  - m_RefCount: 1
+    m_Data: {fileID: 0}
+  - m_RefCount: 1
+    m_Data: {fileID: 0}
+  - m_RefCount: 1
+    m_Data: {fileID: 11400000, guid: 13a98ad561a258e4ea2b2822934c5bc1, type: 2}
+  - m_RefCount: 1
+    m_Data: {fileID: 11400000, guid: 0bfa85ffebd22b54a965248a4f6ff217, type: 2}
   m_TileSpriteArray:
   - m_RefCount: 1
     m_Data: {fileID: 21300000, guid: ecc5ea3e63a906e44aff4799c335ed87, type: 3}
@@ -406,16 +458,6 @@ Tilemap:
     m_Data: {fileID: 21300000, guid: 6a661e63263f018479cbfae9cbb9934a, type: 3}
   - m_RefCount: 1
     m_Data: {fileID: 0}
-<<<<<<< HEAD:UnderGroundLife/Assets/Sprites/UndergroundlifeTiles.prefab
-  - m_RefCount: 1
-    m_Data: {fileID: 0}
-  - m_RefCount: 1
-    m_Data: {fileID: 21300000, guid: acb166efbbcd22148856a48ed58ef3e9, type: 3}
-  - m_RefCount: 1
-    m_Data: {fileID: 21300000, guid: 04ae2b0b789141a40b0440bc53d6eb92, type: 3}
-  m_TileMatrixArray:
-  - m_RefCount: 13
-=======
   - m_RefCount: 1
     m_Data: {fileID: 0}
   - m_RefCount: 1
@@ -442,9 +484,20 @@ Tilemap:
     m_Data: {fileID: 21300000, guid: 6492c1f1c119f254cb4c899284b211c3, type: 3}
   - m_RefCount: 1
     m_Data: {fileID: 21300000, guid: 299de8515d7bfe642870a9f1bddc0f0d, type: 3}
+  - m_RefCount: 1
+    m_Data: {fileID: 21300000, guid: 7300655986fb56a46a21f328f6fdbe09, type: 3}
+  - m_RefCount: 1
+    m_Data: {fileID: 0}
+  - m_RefCount: 1
+    m_Data: {fileID: 0}
+  - m_RefCount: 1
+    m_Data: {fileID: 0}
+  - m_RefCount: 1
+    m_Data: {fileID: 21300000, guid: 101e45a18364d1140b1eadfd5c700899, type: 3}
+  - m_RefCount: 1
+    m_Data: {fileID: 21300000, guid: e1239c37520858241a2ad9f49c1ae716, type: 3}
   m_TileMatrixArray:
-  - m_RefCount: 23
->>>>>>> code:UnderGroundLife/Assets/Graphics/Sprites/UndergroundlifeTiles.prefab
+  - m_RefCount: 29
     m_Data:
       e00: 1
       e01: 0
@@ -463,28 +516,23 @@ Tilemap:
       e32: 0
       e33: 1
   m_TileColorArray:
-  - m_RefCount: 21
+  - m_RefCount: 24
     m_Data: {r: 1, g: 1, b: 1, a: 1}
   - m_RefCount: 1
-<<<<<<< HEAD:UnderGroundLife/Assets/Sprites/UndergroundlifeTiles.prefab
-    m_Data: {r: 0.94980055, g: 0.4143678, b: 0.42054358, a: 1}
+    m_Data: {r: 0.94330513, g: 0.4682964, b: 0.52501833, a: 1}
   - m_RefCount: 1
-    m_Data: {r: 0.72500116, g: 0.3171285, b: 0.34828115, a: 1}
+    m_Data: {r: 0.7040699, g: 0.3715977, b: 0.37324187, a: 1}
+  - m_RefCount: 1
+    m_Data: {r: 0.77276903, g: 0.38350314, b: 0.44157642, a: 1}
+  - m_RefCount: 1
+    m_Data: {r: 0.84267324, g: 0.48275265, b: 0.5036169, a: 1}
+  - m_RefCount: 1
+    m_Data: {r: 0.7913117, g: 0.3746768, b: 0.4909721, a: 1}
   m_TileObjectToInstantiateArray: []
   m_AnimationFrameRate: 1
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Origin: {x: -9, y: -7, z: 0}
-  m_Size: {x: 9, y: 7, z: 1}
-=======
-    m_Data: {r: 0.8584204, g: 0.46535498, b: 0.56006205, a: 1}
-  - m_RefCount: 1
-    m_Data: {r: 0.7793042, g: 0.4172503, b: 0.44806027, a: 1}
-  m_TileObjectToInstantiateArray: []
-  m_AnimationFrameRate: 1
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Origin: {x: -9, y: -4, z: 0}
-  m_Size: {x: 9, y: 5, z: 1}
->>>>>>> code:UnderGroundLife/Assets/Graphics/Sprites/UndergroundlifeTiles.prefab
+  m_Origin: {x: -14, y: -4, z: 0}
+  m_Size: {x: 14, y: 5, z: 1}
   m_TileAnchor: {x: 0.5, y: 0.5, z: 0}
   m_TileOrientation: 0
   m_TileOrientationMatrix:
@@ -524,7 +572,7 @@ TilemapRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -553,11 +601,7 @@ TilemapRenderer:
   m_Mode: 0
   m_DetectChunkCullingBounds: 0
   m_MaskInteraction: 0
-<<<<<<< HEAD:UnderGroundLife/Assets/Sprites/UndergroundlifeTiles.prefab
---- !u!114 &7850548325694899905
-=======
---- !u!114 &5931171485705261488
->>>>>>> code:UnderGroundLife/Assets/Graphics/Sprites/UndergroundlifeTiles.prefab
+--- !u!114 &6126968547540363635
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
