@@ -48,11 +48,6 @@ public class enemyProjectile : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D enemy)
     {
 
-        if (enemy.CompareTag("phase"))
-        {
-            print("hit wall");
-        }
-
 
         if (enemy.CompareTag("Player"))
         {
@@ -61,11 +56,7 @@ public class enemyProjectile : MonoBehaviour
             DestroyProjectile();
         }
 
-        // if (enemy.CompareTag("Player"))
-        //   {
-        //        enemy.GetComponent<playerHealth>().takeDamage(MaxDamage);
-        //   }
-
+      
 
     }
 

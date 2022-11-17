@@ -28,7 +28,7 @@ public class enemyShooting : MonoBehaviour
 
         if (distToPlayer < aggroRange && GameObject.FindGameObjectWithTag("Player") != null)
         {
-
+            print("pp shooting");
             if (timeBtwshots <= 0)
             {
                 Instantiate(projectile, shotPoint.position, Quaternion.identity);

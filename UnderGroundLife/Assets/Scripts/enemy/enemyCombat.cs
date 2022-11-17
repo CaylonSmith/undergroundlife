@@ -18,7 +18,7 @@ public class enemyCombat : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        attackDamage = 30;
+       
     }
 
     // Update is called once per frame

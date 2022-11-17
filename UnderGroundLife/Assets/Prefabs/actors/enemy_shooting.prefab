@@ -316,7 +316,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   timeBtwshots: 0
   startTimeBtwShots: 2
-  projectile: {fileID: 0}
-  shotPoint: {fileID: 0}
+  projectile: {fileID: 3106791347753510932, guid: d9334c45c80948d429b134ae4fada551, type: 3}
+  shotPoint: {fileID: 580212318563644317}
   player: {fileID: 0}
   aggroRange: 0
