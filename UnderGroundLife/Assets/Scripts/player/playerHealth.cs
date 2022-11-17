@@ -52,9 +52,11 @@ public class playerHealth : MonoBehaviour
 
     public void gainHealth(int health)
     {
-        if (currenthealth! > maxHealth)
+        if (currenthealth <maxHealth)
         {
             currenthealth += health;
+            
+           
         }
 
       

@@ -38,7 +38,7 @@ public class weapon : MonoBehaviour
 
 
 
-        AmmoGunText.text = shotsLeft.ToString();
+       AmmoGunText.text = shotsLeft.ToString();
         MaxAmmoGunText.text = maxShots.ToString();
 
 
