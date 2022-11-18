@@ -10,8 +10,14 @@ public class giveGun : MonoBehaviour
         {
             GameObject.FindGameObjectWithTag("gg").GetComponent<gunMonitor>().enabled = true;
             GameObject.FindGameObjectWithTag("Player").GetComponent<weapon>().enabled = true;
+        
+
+
+
+
 
             destroyPickup();
+
         }
     }
 

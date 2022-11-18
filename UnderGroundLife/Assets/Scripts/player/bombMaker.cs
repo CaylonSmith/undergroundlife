@@ -12,7 +12,7 @@ public class bombMaker : MonoBehaviour
 
     public TextMeshProUGUI AmmoBombText;
 
-    public TextMeshProUGUI MaxAmmoBombText;
+ 
 
 
 
@@ -40,7 +40,6 @@ public class bombMaker : MonoBehaviour
 
         AmmoBombText.text = currentAmountBombs.ToString();
 
-        MaxAmmoBombText.text = Maxbomb.ToString();
         
     }
 

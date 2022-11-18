@@ -12,6 +12,7 @@ public class enemyShooting : MonoBehaviour
     public Transform shotPoint;
     [SerializeField] Transform player;
     [SerializeField] float aggroRange;
+    public Animator animator;
 
 
     // Start is called before the first frame update
@@ -31,6 +32,7 @@ public class enemyShooting : MonoBehaviour
             print("pp shooting");
             if (timeBtwshots <= 0)
             {
+                animator.SetBool("isAttacking", true);
                 Instantiate(projectile, shotPoint.position, Quaternion.identity);
                 timeBtwshots = startTimeBtwShots;
             }

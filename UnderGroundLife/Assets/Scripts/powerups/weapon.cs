@@ -17,7 +17,7 @@ public class weapon : MonoBehaviour
 
 
     public TextMeshProUGUI AmmoGunText;
-    public TextMeshProUGUI MaxAmmoGunText;
+  
 
 
     private void Start()
@@ -39,7 +39,7 @@ public class weapon : MonoBehaviour
 
 
        AmmoGunText.text = shotsLeft.ToString();
-        MaxAmmoGunText.text = maxShots.ToString();
+
 
 
         if (timebtwShots <= 0)
