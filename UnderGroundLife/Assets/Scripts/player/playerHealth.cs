@@ -72,7 +72,7 @@ public class playerHealth : MonoBehaviour
         gameObject.transform.position = _cMan.lastCheckpoint;
 
 
-        currenthealth = maxHealth;
+        currenthealth = 75;
 
         //gameObject.GetComponent<Renderer>().material.color = new Color(255, 255, 255);
 

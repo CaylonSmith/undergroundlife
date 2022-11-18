@@ -30,7 +30,7 @@ public class healthPickup : MonoBehaviour
         
         if (collision.CompareTag("Player"))
         {
-           GameObject.FindGameObjectWithTag("Player").GetComponent<playerHealth>().gainHealth(15);
+           GameObject.FindGameObjectWithTag("Player").GetComponent<playerHealth>().gainHealth(25);
             Destroy(gameObject);
            
 
