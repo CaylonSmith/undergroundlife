@@ -70,7 +70,7 @@ namespace Shinjingi
             {
                 if (direction == 0)
                 {
-                    if (Input.GetKeyDown(KeyCode.RightShift))
+                    if (Input.GetKeyDown(KeyCode.Space))
                     {
                         Physics2D.IgnoreLayerCollision(playerLayers, enemyLayer, true);
                         if (moveInput < 0)

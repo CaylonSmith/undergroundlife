@@ -18,6 +18,7 @@ TagManager:
   - cMan
   - gun_ui
   - bomb_ui
+  - musicly
   layers:
   - Default
   - TransparentFX

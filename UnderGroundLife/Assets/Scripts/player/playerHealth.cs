@@ -12,8 +12,9 @@ public class playerHealth : MonoBehaviour
     public int currenthealth;
 
     public Image bar;
-
-
+    public Material whiteMaterial;
+    private Material defaultMaterial;
+    SpriteRenderer sR;
 
     [SerializeField] Rigidbody2D rb2d;
 
@@ -29,6 +30,9 @@ public class playerHealth : MonoBehaviour
     {
         currenthealth = maxHealth;
         _cMan = GameObject.FindGameObjectWithTag("cMan").GetComponent<manager_checkPoint>();
+        sR = GetComponent<SpriteRenderer>();
+        defaultMaterial = sR.material;
+
 
     }
 
@@ -43,6 +47,9 @@ public class playerHealth : MonoBehaviour
     public void takeDamage(int damage)
     {
         currenthealth -= damage;
+        sR.material = whiteMaterial;
+        Invoke("resetMats", 0.3f);
+
 
         if (currenthealth <= 0)
         {
@@ -85,5 +92,9 @@ public class playerHealth : MonoBehaviour
     {
         float fillAmount = (float)currenthealth / (float)maxHealth;
         bar.fillAmount = fillAmount;
+    }
+    void resetMats()
+    {
+        sR.material = defaultMaterial;
     }
 }
