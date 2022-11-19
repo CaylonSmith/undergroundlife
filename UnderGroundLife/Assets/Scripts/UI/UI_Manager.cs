@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+
 public class UI_Manager : MonoBehaviour
 {
 
@@ -10,6 +11,7 @@ public class UI_Manager : MonoBehaviour
     int PlayerHealth;
 
     GameObject player;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -23,6 +25,7 @@ public class UI_Manager : MonoBehaviour
     public void continueGame()
     {
         SceneManager.LoadScene(1);
+        
     }
 
 
@@ -33,7 +36,8 @@ public class UI_Manager : MonoBehaviour
 
     public void mainMenu()
     {
-        SceneManager.LoadScene(0);
+        SceneManager.LoadScene(3);
+        Time.timeScale = 1;
     }
 
 
