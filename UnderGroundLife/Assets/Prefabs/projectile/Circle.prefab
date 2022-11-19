@@ -101,7 +101,7 @@ MonoBehaviour:
   speed: 5
   lifeTime: 0.5
   destroyEffect: {fileID: 1376699625944520016, guid: ba3ad69da1053544da9f36790763e394, type: 3}
-  attackDamage: 30
+  attackDamage: 45
   MaxDamage: 0
 --- !u!58 &1219123911623735651
 CircleCollider2D:

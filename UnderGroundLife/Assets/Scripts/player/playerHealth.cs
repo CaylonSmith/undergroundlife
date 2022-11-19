@@ -41,6 +41,9 @@ public class playerHealth : MonoBehaviour
     {
         rb2d = GameObject.FindGameObjectWithTag("Player").GetComponent<Rigidbody2D>();
         getcurrentFill(); 
+
+
+       
     }
 
 
@@ -96,5 +99,16 @@ public class playerHealth : MonoBehaviour
     void resetMats()
     {
         sR.material = defaultMaterial;
+    }
+
+
+
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("deathBox"))
+        {
+            die();
+        }
     }
 }

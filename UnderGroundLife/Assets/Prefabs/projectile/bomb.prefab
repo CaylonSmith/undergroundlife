@@ -104,7 +104,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 512
   damage: 0
-  maxDamage: 50
+  maxDamage: 60
   timer: 3
   effect: {fileID: 1376699625944520016, guid: ba3ad69da1053544da9f36790763e394, type: 3}
 --- !u!58 &3944699622962574950

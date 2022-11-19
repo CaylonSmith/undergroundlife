@@ -72,11 +72,11 @@ public class playerCombat : MonoBehaviour
     {
         if (hasKnife == true)
         {
-            attackDamage = 100;
+            attackDamage = 45;
         }
         else if(hasKnife==false)
         {
-            attackDamage = 50;
+            attackDamage = 45;
         }
     }
 

@@ -19,6 +19,7 @@ TagManager:
   - gun_ui
   - bomb_ui
   - musicly
+  - deathBox
   layers:
   - Default
   - TransparentFX
